@@ -1,2 +1,3 @@
 # trocai
-Projeto Trocai - Meteor
+
+run with: meteor --settings settings.json

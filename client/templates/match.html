@@ -1,0 +1,29 @@
+<ion-modal-view title="Novo Produto" ng-controller="NewMatchCtrl as match" class="new-match">
+
+  <ion-content class="match">
+    <center>
+      <h1>MATCH</h1>
+    </center>
+    <ion-item
+      ng-repeat="match in match.data"
+      class="list card current-product "
+      ng-class="{skipped: match.rated == false,
+      favorited: match.rated == true}"
+      ng-show="match && !match.hide"
+      type="item-text-wrap"
+      href="#/tab/products/{{match._id}}">
+      <div>
+        <div class="item item-image">
+          <img ng-src="{{match.photos}}" />
+        </div>
+        <div class="item">
+          <h2>{{match.name}}</h2>
+          <p>Em troca por: {{match.wishname}}</p>
+        </div>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        
+      </div>
+    </ion-item>
+  </ion-content>
+</ion-modal-view>

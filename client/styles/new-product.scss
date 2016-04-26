@@ -1,0 +1,29 @@
+div.button-next input {
+    background: transparent url("/icones_prox.png") no-repeat center top;
+    background-size: contain;
+    cursor:pointer;
+    width: 150px;
+    height: 70px;
+    border: none;
+    float: right;
+    padding-right: 10px;
+}
+
+div.button-volt input {
+    background: transparent url("/icones_volt.png") no-repeat center top;
+    background-size: contain;
+    cursor:pointer;
+    width: 150px;
+    height: 70px;
+    border: none;
+    float: left;
+    padding-left: 10px;
+}
+
+.step-img {
+  width: 70%;
+}
+
+.newproductstep{
+  text-align: center;
+}

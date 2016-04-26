@@ -1,0 +1,59 @@
+/* Splash page stylings*/
+.splash-page{
+  background: url('/login_background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ .splash-page .logo{
+  background: url('/logo_trocai.png');
+  align: center;
+  background-position: 50% 100%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto !important;
+  min-height: 200px;
+}
+
+.splash-page .logo h1{
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 42px;
+}
+
+.splash-page .signup-opt{
+  color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.splash-page .action-button{
+  font-weight: bolder;
+  align: center;
+  text-align: center;
+}
+
+.login-facebook{
+  margin-top: 200px;
+  position: relative;
+  text-align: center;
+}
+
+//botao facebook
+#login-buttons .login-buttons-with-only-one-button .login-button {
+  background: transparent url('/login_with_facebook.png') no-repeat center top;
+  background-size: contain;
+  cursor:pointer;
+  width: 270px;
+  height: 200px;
+  border: none;
+}
+.sign-in-text-facebook{
+  display: none !important;
+}
+.login-image {
+    display: none;
+}

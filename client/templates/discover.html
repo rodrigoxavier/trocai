@@ -1,0 +1,35 @@
+<ion-view view-title="Discover" class="discover-page">
+  <ion-nav-buttons side="right">
+    <button ng-click="products.showNewProductModal()" class="button button-clear button-positive button-icon ion-plus-circled"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item
+        ng-repeat="product in products.data"
+        class="list card current-product "
+        ng-class="{skipped: product.rated == false,
+        favorited: product.rated == true}"
+        ng-show="product && !product.hide"
+        type="item-text-wrap"
+        href="#/tab/products/{{products._id}}">
+        <div>
+          <div class="item item-image">
+            <img ng-src="{{product.photos}}" />
+          </div>
+          <div class="item">
+            <h2>{{product.name}}</h2>
+            <p>Em troca por: {{product.wishname}}</p>
+          </div>
+        </div>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" ng-click="products.sendFeedback(false,product)">
+            <i class="icon ion-close"></i>
+          </a>
+          <a class="tab-item" ng-click="products.sendFeedback(true,product)">
+            <i class="icon ion-heart"></i>
+          </a>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

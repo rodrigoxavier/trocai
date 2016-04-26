@@ -1,0 +1,64 @@
+<ion-modal-view title="Novo Produto" ng-controller="NewProductCtrl as product">
+
+  <ion-content class="profile">
+
+    <wizard on-finish="product.newProduct()" hide-indicators="true">
+      <wz-step title="Principal" canexit="product.validationPricipal()">
+        <div class="newproductstep">
+          <img class="step-img" src="passos_1.png"/>
+          <img class="step-img" src="registreseuproduto.png"/>
+        </div>
+
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Nome do Produto</span>
+            <input type="text" placeholder="Nome do Produto" ng-model="product.name">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Descrição</span>
+            <input type="text" placeholder="Descrição" ng-model="product.description">
+          </label>
+        <br/>
+        <div class="button-volt"><input type="submit" ng-click="product.hideNewProductModal()" value=""></div>
+        <div class="button-next"><input type="submit" wz-next value=""></div>
+        </div>
+      </wz-step>
+      <wz-step title="Fotos" canexit="product.validationPhotos()">
+        <div class="newproductstep">
+          <img class="step-img" src="passos_2.png"/>
+          <img class="step-img" src="adicionefotos.png"/>
+        </div>
+
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Fotos</span>
+            <input type="text" placeholder="Fotos" ng-model="product.photos">
+          </label>
+        <br/>
+        <div class="button-volt"><input type="submit" wz-previous value=""></div>
+        <div class="button-next"><input type="submit" wz-next value=""></div>
+        </div>
+      </wz-step>
+      <wz-step title="Desejos" canexit="product.validationWishes()">
+        <div class="newproductstep">
+          <img class="step-img" src="passos_3.png"/>
+          <img class="step-img" src="produtoquedeseja.png"/>
+        </div>
+
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Nome do Produto</span>
+            <input type="text" placeholder="Nome do Produto" ng-model="product.wishname">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Descrição</span>
+            <input type="text" placeholder="Descrição" ng-model="product.wishdescription">
+          </label>
+        <br/>
+        <div class="button-volt"><input type="submit" wz-previous value=""></div>
+        <div class="button-next"><input type="submit" wz-next value=""></div>
+        </div>
+      </wz-step>
+    </wizard>
+  </ion-content>
+</ion-modal-view>
