@@ -1,0 +1,2 @@
+# trocai
+Projeto Trocai - Meteor
